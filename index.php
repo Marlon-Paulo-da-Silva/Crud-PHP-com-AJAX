@@ -41,8 +41,8 @@
         </div>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-dark" onclick="addUser();">Salvar</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
         </div>
       </div>
     </div>
@@ -61,5 +61,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+
+<script>
+  function addUser(){
+    var nameAdd = $('#completename').val();
+    var emailAdd = $('#completeemail').val();
+    var phoneAdd = $('#completephone').val();
+    var addressAdd = $('#completeaddress').val();
+    console.log('função habilitada');
+    $.ajax({
+      url: "insert.php",
+      type: "post",
+      data: {
+        nameSend: nameAdd,
+        emailSend: emailAdd,
+        phoneSend: phoneAdd,
+        addressSend: addressAdd,
+      }
+      success: function(data, status){
+          //função para mostrar os dados
+          console.log(status);
+      }
+    });
+  }
+</script>
 </body>
 </html>
