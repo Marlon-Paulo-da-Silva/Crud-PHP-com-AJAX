@@ -62,6 +62,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 <script>
+  function displayData(){
+    var displayData = "true";
+
+    $.ajax({
+      url: "display.php",
+      type: "post",
+      data:{
+        displaySend: displayData
+      },
+      success: function(data, status){
+        
+      }
+    })
+  }
+
   function adicionarusuario(){
 
     var nameAdd = $('#completename').val();
@@ -84,6 +99,7 @@
           //função para mostrar os dados
           console.log('função ajax habilitada');
           console.log(status);
+          displayData();
       }
     });
   }
