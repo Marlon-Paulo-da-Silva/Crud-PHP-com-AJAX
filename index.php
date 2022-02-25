@@ -41,7 +41,7 @@
         </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-dark" onclick="adicionarusuario()">Salvar</button>
+          <button type="button" class="btn btn-dark my-3" onclick="adicionarusuario()">Salvar</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
         </div>
       </div>
@@ -54,6 +54,9 @@
     <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#completeModal">
       Adicionar usuário
     </button>
+    <div id="displayDataTable">
+
+    </div>
   </div>
 
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script> -->
@@ -62,6 +65,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 <script>
+  // display function
   function displayData(){
     var displayData = "true";
 
@@ -72,7 +76,7 @@
         displaySend: displayData
       },
       success: function(data, status){
-        
+        $('#displayDataTable').html(data)
       }
     })
   }
