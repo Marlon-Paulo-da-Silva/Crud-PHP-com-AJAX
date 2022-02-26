@@ -41,7 +41,7 @@
         </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-dark my-3" onclick="adicionarusuario()">Salvar</button>
+          <button type="button" class="btn btn-dark" onclick="adicionarusuario()">Salvar</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
         </div>
       </div>
@@ -51,7 +51,7 @@
   <div class="container my-3">
     <h1 class="text-center">Tabela de usuários</h1>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#completeModal">
+    <button type="button" class="btn btn-dark my-3" data-toggle="modal" data-target="#completeModal">
       Adicionar usuário
     </button>
     <div id="displayDataTable">
@@ -65,6 +65,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
 <script>
+
+  $(document).ready(function(){
+    displayData();
+  });
+
   // display function
   function displayData(){
     var displayData = "true";
@@ -105,6 +110,20 @@
           console.log(status);
           displayData();
       }
+    });
+  }
+  
+  function DeleteUser(deleteuser){
+    $.ajax({
+      url: "delete.php",
+      type: "post",
+      data: {
+        deletesend: deleteid
+      },
+      success: function(data, status){
+        displayData();
+      }
+
     });
   }
 </script>

@@ -27,6 +27,10 @@
       <td>'.$email.'</td>
       <td>'.$phone.'</td>
       <td>'.$address.'</td>
+      <td>
+        <button class="btn btn-dark">Update</button>
+        <button class="btn btn-danger" onclick=DeleteUser('.$id.')>Delete</button>
+      </td>
     </tr>';
     }
 
@@ -36,3 +40,4 @@
   }
 
 ?>
+
