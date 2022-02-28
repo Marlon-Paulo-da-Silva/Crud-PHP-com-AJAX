@@ -48,6 +48,43 @@
     </div>
   </div>
 
+  <!-- update Modal -->
+  <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Atualizar Usuário</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <div class="form-group">
+          <label for="updatename">Nome</label>
+          <input type="text" class="form-control" id="updatename" aria-describedby="emailHelp" placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="updateemail">E-mail</label>
+          <input type="email" class="form-control" id="updateemail" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+        </div>
+        <div class="form-group">
+          <label for="updatephone">Telefone</label>
+          <input type="phone" class="form-control" id="updatephone" aria-describedby="emailHelp" placeholder="Digite seu telefone">
+        </div>
+        <div class="form-group">
+          <label for="updateaddress">Endereço</label>
+          <input type="text" class="form-control" id="updateaddress" aria-describedby="emailHelp" placeholder="Digite seu endereço">
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" onclick="adicionarusuario()">Update</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <input type="hidden" id="hiddendata">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container my-3">
     <h1 class="text-center">Tabela de usuários</h1>
     <!-- Button trigger modal -->
@@ -118,13 +155,33 @@
       url: "delete.php",
       type: "post",
       data: {
-        deletesend: deleteid
+        deletesend: deleteuser
       },
       success: function(data, status){
         displayData();
       }
 
     });
+  }
+
+  // Update function
+
+  function GetDetails(updateid){
+    $('#hiddendata').val(updateid);
+
+    $.post("update.php", {
+      updateid: updateid
+    },
+    function(data, status){
+      var userid = JSON.parse(data);
+      $('#updatename').val(userid.name);
+      $('#updateemail').val(userid.email);
+      $('#updatephone').val(userid.phone);
+      $('#updateaddress').val(userid.address);
+    });
+
+    $('#updateModal').modal('show');
+
   }
 </script>
 </body>

@@ -14,6 +14,7 @@
     </thead>';
     $sql = "Select * from crud";
     $result = mysqli_query($con, $sql);
+    $number = 1;
     while($row = mysqli_fetch_assoc($result)){
       $id=$row['Id'];
       $name=$row['name'];
@@ -22,16 +23,17 @@
       $email=$row['email'];
 
       $table.='<tr>
-      <td scope="row">'.$id.'</td>
+      <td scope="row">'.$number.'</td>
       <td>'.$name.'</td>
       <td>'.$email.'</td>
       <td>'.$phone.'</td>
       <td>'.$address.'</td>
       <td>
-        <button class="btn btn-dark">Update</button>
-        <button class="btn btn-danger" onclick=DeleteUser('.$id.')>Delete</button>
+        <button class="btn btn-dark" onclick="GetDetails('.$id.')">Update</button>
+        <button class="btn btn-danger" onclick="DeleteUser('.$id.')">Delete</button>
       </td>
     </tr>';
+    $number++;
     }
 
     $table.="</table>";
