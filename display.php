@@ -29,8 +29,8 @@
       <td>'.$phone.'</td>
       <td>'.$address.'</td>
       <td>
-        <button class="btn btn-dark" onclick="GetDetails('.$id.')">Update</button>
-        <button class="btn btn-danger" onclick="DeleteUser('.$id.')">Delete</button>
+        <button class="btn btn-dark" onclick="GetDetails('.$id.')">Atualizar</button>
+        <button class="btn btn-danger" onclick="DeleteUser('.$id.')">Apagar</button>
       </td>
     </tr>';
     $number++;

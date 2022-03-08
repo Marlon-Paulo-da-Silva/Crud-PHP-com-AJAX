@@ -77,7 +77,7 @@
         </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-dark" onclick="adicionarusuario()">Update</button>
+          <button type="button" class="btn btn-dark" onclick="updateDetails()">Salvar</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           <input type="hidden" id="hiddendata">
         </div>
@@ -149,7 +149,9 @@
       }
     });
   }
-  
+
+  // Deletar usuário
+
   function DeleteUser(deleteuser){
     $.ajax({
       url: "delete.php",
@@ -165,7 +167,6 @@
   }
 
   // Update function
-
   function GetDetails(updateid){
     $('#hiddendata').val(updateid);
 
@@ -181,6 +182,28 @@
     });
 
     $('#updateModal').modal('show');
+
+  }
+
+  function updateDetails(){
+    var updatename = $('#updatename').val();
+    var updateemail = $('#updateemail').val();
+    var updatephone = $('#updatephone').val();
+    var updateaddress = $('#updateaddress').val();
+
+    var hiddendata = $('#hiddendata').val();
+    console.log('hiddendata:  ', hiddendata);
+    $.post("update.php", {
+      updatename: updatename,
+      updateemail: updateemail,
+      updatephone: updatephone,
+      updateaddress: updateaddress,
+      hiddendata: hiddendata,
+    }, function(data, status){
+      displayData();
+      $('updateModal').modal('hide');
+      
+    })
 
   }
 </script>
