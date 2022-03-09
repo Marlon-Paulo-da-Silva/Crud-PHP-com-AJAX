@@ -143,6 +143,7 @@
       },
       success: function(dataResult, status){
           //função para mostrar os dados
+          $('#completeModal').modal('hide');
           console.log('função ajax habilitada');
           console.log(status);
           displayData();
@@ -186,22 +187,34 @@
   }
 
   function updateDetails(){
-    var updatename = $('#updatename').val();
-    var updateemail = $('#updateemail').val();
-    var updatephone = $('#updatephone').val();
-    var updateaddress = $('#updateaddress').val();
+    var newupdatename = $('#updatename').val();
+    var newupdateemail = $('#updateemail').val();
+    var newupdatephone = $('#updatephone').val();
+    var newupdateaddress = $('#updateaddress').val();
 
-    var hiddendata = $('#hiddendata').val();
-    console.log('hiddendata:  ', hiddendata);
-    $.post("update.php", {
-      updatename: updatename,
-      updateemail: updateemail,
-      updatephone: updatephone,
-      updateaddress: updateaddress,
-      hiddendata: hiddendata,
+    var newhiddendata = $('#hiddendata').val();
+
+    
+
+    $.post("saveUpdate.php", {
+      updatename: newupdatename,
+      updateemail: newupdateemail,
+      updatephone: newupdatephone,
+      updateaddress: newupdateaddress,
+      hiddendata: newhiddendata,
+
     }, function(data, status){
+
+      console.log('hiddendata:  ', newhiddendata);
+      console.log('newupdatename:  ', newupdatename);
+      console.log('newupdateemail:  ', newupdateemail);
+      console.log('newupdatephone:  ', newupdatephone);
+      console.log('newupdateaddress:  ', newupdateaddress);
+
+      console.log(status);
+
       displayData();
-      $('updateModal').modal('hide');
+      $('#updateModal').modal('hide');
       
     })
 
