@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="https://github.com/Marlon-Paulo-da-Silva/TikTok-Clone-ReactNative/blob/master/assets/tiktoklogo.png" alt="tiktoklogo" width="120">
+  <img src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela1.png" alt="crud-ajax" width="600">
 <br>
 <br>
 Crud PHP utilizando AJAX
@@ -15,8 +15,11 @@ Crud PHP utilizando AJAX
 </p>
 
 <div align="center">
-  <img align="center" src="https://github.com/Marlon-Paulo-da-Silva/TikTok-Clone-ReactNative/blob/master/tiktok.gif" alt="demo" height="425">
-  <img align="center" src="https://github.com/Marlon-Paulo-da-Silva/TikTok-Clone-ReactNative/blob/master/tiktokfeed.gif" alt="demo" height="425">
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/gifajax.gif" alt="demo" height="325"><br><br>
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela1.png" alt="demo" height="325"><br><br>
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela2.png" alt="demo" height="325"><br><br>
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela3.png" alt="demo" height="325">
+  
 
 </div>
 
