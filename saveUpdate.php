@@ -1,4 +1,6 @@
 <?php
+
+    include 'connect.php';
     //update query
 
     if(isset($_POST['hiddendata']) ){
@@ -11,7 +13,7 @@
   
       $sql = "update `crud` set name='$name', email='$email', phone='$phone', adress='$address' where id=$uniqueid";
   
-      $result = mysqli_query($con, $sql);
+      mysqli_query($con, $sql);
   
       echo '<script>console.log("tem hiddendata")</script>';
     }
