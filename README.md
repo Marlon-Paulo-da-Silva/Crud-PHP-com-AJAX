@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela1.png" alt="crud-ajax" width="600">
+  <img src="https://storage.googleapis.com/hcode.com.br/courses/58/logo_svg5fc37f8680ecb.svg" alt="crud-ajax" width="600">
 <br>
 <br>
 Crud PHP utilizando AJAX
@@ -15,10 +15,10 @@ Crud PHP utilizando AJAX
 </p>
 
 <div align="center">
-  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/gifajax.gif" alt="demo" height="325"><br><br>
-  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela1.png" alt="demo" height="325"><br><br>
-  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela2.png" alt="demo" height="325"><br><br>
-  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/82dbcf9b093d49cd452ca2288df15fe17691f21b/repo-img/tela3.png" alt="demo" height="325">
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/main/repo-img/gifajax.gif" alt="demo" height="325"><br><br>
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/main/repo-img/tela1.png" alt="demo" height="325"><br><br>
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/main/repo-img/tela2.png" alt="demo" height="325"><br><br>
+  <img align="center" src="https://raw.githubusercontent.com/Marlon-Paulo-da-Silva/Crud-PHP-com-AJAX/main/repo-img/tela3.png" alt="demo" height="325">
   
 
 </div>
@@ -39,8 +39,3 @@ Essa aplicação
 
 ## Começe a usar
 
-1. Clone esse repositório usando: `git clone git@github.com:Marlon-Paulo-da-Silva/TikTok-Clone-ReactNative.git`
-2. Abra a pasta utilizando: `cd TikTok-Clone-ReactNative`<br />
-3. Execute `yarn install` para instalar dependencias<br />
-4. Execute `expo start` para abrir o App
-5. Execute `yarn json-server server.json -H "192.168.0.105" -p 8000 -d 1000 -w` para abrir o server.json como uma API (No lugar das aspas utilize o IP da Lan do Expo de sua maquina, sem aspas )
